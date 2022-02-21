@@ -60,14 +60,6 @@ public class CoffeeMaker {
         milk -= typeCoffee.getMilk();
         water -= typeCoffee.getWater();
 
-        try { //Как будто готовим
-            Thread.sleep(9000);
-        } catch (InterruptedException e) {
-            status = CoffeeMakerStatus.ON;
-            return Collections.singletonList(CoffeeMakerResultMessages.WRONG);
-            //e.printStackTrace();
-        }
-
         status = CoffeeMakerStatus.ON;
         return Collections.singletonList(CoffeeMakerResultMessages.COFFEE_READY);
     }
